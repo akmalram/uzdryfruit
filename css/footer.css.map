@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "footer.scss",
+        "_smart-grid.scss"
+    ],
+    "names": [],
+    "file": "footer.css"
+}

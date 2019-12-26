@@ -1,0 +1,346 @@
+.navbar {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  z-index: 111;
+}
+
+.navbar.scrolled .navbar-menu .item {
+  height: 70px;
+}
+
+.navbar.scrolled {
+  background-color: #fff;
+  border-bottom: 3px solid #000;
+}
+
+.navbar.scrolled .navbar-menu .link {
+  color: #000;
+}
+
+.navbar.scrolled .navbar-contacts .phone-call a {
+  color: #141414;
+}
+
+.navbar-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.navbar-logo a {
+  font-size: 24px;
+  color: #ffff;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-logo a {
+    font-size: 24px;
+  }
+}
+
+.navbar .checkbox-opener {
+  display: none;
+}
+
+.navbar-menu {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar-menu .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-menu .item {
+  margin: 0 7px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: height 200ms ease-in-out;
+  transition: height 200ms ease-in-out;
+  position: relative;
+}
+
+.navbar-menu .link {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+  padding: 7px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.navbar-menu .link:hover {
+  color: #999;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.navbar-toggler .btn {
+  width: 35px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 1111;
+}
+
+.navbar-toggler .btn .lines {
+  width: 80%;
+  height: 3px;
+  background: #000;
+  border-radius: 10px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform: rotate(0) translate(0, 0);
+          transform: rotate(0) translate(0, 0);
+}
+
+.navbar-toggler .btn.active .line-2 {
+  opacity: 0;
+}
+
+.navbar-toggler .btn.active .line-1 {
+  -webkit-transform: rotate(221deg) translate(-5px, -6px);
+          transform: rotate(221deg) translate(-5px, -6px);
+}
+
+.navbar-toggler .btn.active .line-3 {
+  -webkit-transform: rotate(-220deg) translate(-6px, 7px);
+          transform: rotate(-220deg) translate(-6px, 7px);
+}
+
+.navbar-contacts {
+  text-align: center;
+}
+
+.navbar-contacts .phone-call a {
+  font-size: 19px;
+  color: #fff;
+}
+
+.navbar-contacts .phone-call a:hover {
+  text-decoration: underline;
+}
+
+.navbar-contacts .telegram {
+  margin-bottom: 5px;
+}
+
+.navbar-contacts .telegram .telegram-btn {
+  font-size: 16px;
+  padding: 4px 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 0;
+    background-color: #fff;
+  }
+  .navbar-inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .navbar-contacts {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 33%;
+  }
+  .navbar-logo {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 33%;
+    margin-right: auto;
+    margin-left: 10px;
+  }
+  .navbar-toggler {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: auto;
+  }
+  .navbar-logo {
+    text-align: center;
+  }
+  .navbar-logo a {
+    font-size: 20px;
+  }
+  .navbar-toggler {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .navbar-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: #fff;
+    padding: 50px 20px;
+  }
+  .navbar-menu.active {
+    left: 0;
+  }
+  .navbar-menu .list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .navbar-menu .item {
+    margin: 0;
+    height: auto;
+    position: static;
+    display: block;
+    width: 100%;
+  }
+  .navbar-menu .link {
+    display: block;
+    font-size: 20px;
+    color: #000;
+  }
+  .navbar-menu .link label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .navbar-menu .link label i {
+    margin-left: auto;
+    margin-right: 10px;
+    font-size: 16px;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    line-height: 24px;
+  }
+  .navbar-menu-contact-info {
+    margin-top: 90px;
+  }
+  .navbar-menu-contact-info .phone-call a, .navbar-menu-contact-info .email a {
+    color: #000;
+    font-size: 18px;
+  }
+  .navbar-menu-contact-info .phone-call a i, .navbar-menu-contact-info .email a i {
+    margin-right: 5px;
+    display: inline-block !important;
+  }
+  .navbar-menu-contact-info .phone-call,
+  .navbar-menu-contact-info .telegram,
+  .navbar-menu-contact-info .email {
+    margin-bottom: 9px;
+  }
+  .navbar-menu-contact-info .address i {
+    margin-right: 5px;
+    font-size: 19px;
+  }
+  .navbar-menu .navbar-logo {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  .navbar-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-contacts .telegram {
+    margin-bottom: 0;
+    margin-left: 5px;
+  }
+  .navbar-contacts .phone-call a {
+    font-size: 14px;
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-menu {
+    width: 100%;
+  }
+  .navbar-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-contacts .phone-call a {
+    display: inline-block;
+    font-size: 12px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 4px 6px;
+  }
+  .navbar-contacts .phone-call i, .navbar-contacts .telegram i {
+    font-size: 25px;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

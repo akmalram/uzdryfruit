@@ -1,0 +1,28 @@
+header {
+  background: url(../imgs/header-bg.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 80vh;
+  padding-top: 10vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    min-height: 50vh;
+  }
+}
+
+header .header-content {
+  position: relative;
+}
+
+header .header-content .form-sm {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,477 @@
+@import './smart-grid';
+@import './mixins';
+
+@include reset();
+
+*:focus {
+    outline: none;
+}
+
+html.fonts-loaded body {
+    font-family: 'Merriweather', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    font-display: swap;
+}
+
+.ps {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.row-inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.swiper-slide {
+    text-align: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background: none !important;
+    width: 50px !important;
+    height: 50px !important;
+
+    @include sm-block {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
+.container {
+    @include wrapper();
+}
+
+.show-xs {
+    display: none !important;
+    @include xs(display, block !important);
+}
+
+.show-md {
+    display: none !important;
+    @include md(display, block !important);
+}
+
+.show-sm {
+    display: none !important;
+    @include sm(display, block !important);
+}
+
+.hide-sm {
+    @include sm-block {
+        display: none !important;
+    }
+}
+
+.hide-md {
+    @include md-block {
+        display: none !important;
+    }
+}
+
+.hide-xs {
+    @include xs-block {
+        display: none !important;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.page-title {
+    font-size: 47px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-top: 5vh;
+    letter-spacing: 1px;
+
+    @include md-block {
+        font-size: 36px;
+        text-align: center;
+        line-height: 1.2;
+        margin-top: 100px;
+    }
+
+    @include sm-block {
+        font-size: 35px;
+    }
+
+    @include xs-block {
+        font-size: 23px;
+    }
+}
+
+.title-secondary {
+    margin-top: 3vh;
+
+    @include sm-block {
+        font-size: 20px;
+        line-height: 1.2;
+        margin-top: 30px;
+    }
+
+    @include xs-block {
+        font-size: 18px;
+    }
+}
+
+.form-sm {
+    max-width: 360px;
+    border: 2px solid #fff;
+    color: #000;
+    box-sizing: border-box;
+    text-align: center;
+    background: #fff;
+    padding: 33px 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+
+    &-input {
+        padding: 11px 20px;
+        box-sizing: border-box;
+        color: black;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        border: 1px solid #999;
+
+        &:hover,
+        &:focus {
+            border-color: #111;
+        }
+    }
+}
+
+.title-primary {
+    font-size: 36px;
+    color: #141414;
+    text-align: center;
+    font-weight: bold;
+
+    @include sm-block {
+        font-size: 34px;
+    }
+
+    @include xs-block {
+        font-size: 24px;
+    }
+
+    &.white {
+        color: #fff;
+    }
+
+}
+
+.title-secondary {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    @include md-block {
+        font-size: 22px;
+    }
+
+    @include md-block {
+        font-size: 20px;
+    }
+}
+
+.title-tertiary {
+    font-size: 19px;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+
+    @include sm-block {
+        font-size: 20px;
+    }
+}
+
+.desc-primary {
+    text-align: center;
+    font-size: 16px;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hr {
+    width: 300px;
+    height: 3px;
+    background-color: #333;
+    margin: 30px auto;
+}
+
+.row {
+    @include row-flex();
+}
+
+.text-center {
+    text-align: center;
+}
+
+.overhidden {
+    @include sm-block {
+        overflow: hidden;
+    }
+}
+
+button {
+    -webkit-appearance: none;
+}
+
+.telegram-btn {
+    font-size: 20px;
+    padding: 10px 12px;
+    color: #fff;
+    border: none;
+    background-color: #0dace8;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 2px solid #0dace8;
+    border-radius: 2px;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        color: #fff;
+        background-color: #0dace8;
+    }
+
+    @media only screen and (max-width: 576px) {
+        font-size: 16px;
+        line-height: 1;
+        letter-spacing: 0.5px;
+    }
+}
+
+
+@mixin btn {
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+
+    @include sm-block {
+        padding: 13px 15px;
+    }
+
+    @include xs-block {
+        padding: 9px 11px;
+    }
+}
+
+.btn-primary {
+    @include btn();
+
+    color: #fff;
+    background: #333;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-background {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        z-index: 11;
+        background-color: rgba(0, 0, 0, .5);
+        transition: all 200ms ease-in-out;
+    }
+
+    &-content {
+        position: relative;
+        width: 500px;
+        max-width: 80%;
+        background-color: #fff;
+        z-index: 111;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 40px;
+        transition: all 150ms ease-in-out;
+        border-radius: 10px;
+    }
+
+    &-content .done {
+        display: none;
+        img {
+            width: 150px;
+        }
+    }
+
+    &-content.done {
+        .form {
+            display: none;
+        }
+
+        .done {
+            display: block;
+        }
+    }
+
+    &-heading {
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.4em;
+        margin-bottom: 20px;
+    }
+
+    &-input- {
+
+        &name,
+        &phone {
+            width: 100%;
+            height: 50px;
+            border: 1px solid #c6c6c6;
+            border-radius: 3px;
+            font-size: 18px;
+            color: #3b3b3b;
+            padding: 0 22px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 40px;
+        font-weight: 700;
+        transform: rotate(45deg);
+        transition: text-shadow .2s ease-in-out;
+        cursor: pointer;
+        text-shadow: 0 0 0rem transparent;
+
+        &:hover {
+            text-shadow: 0 0 15px #3b3b3b;
+        }
+
+    }
+
+    // Show & Hide
+    // Hiding
+    &-content {
+        transform: translateY(-8rem) scale(.9);
+        opacity: .4;
+    }
+
+    &-background {
+        opacity: .3;
+    }
+
+    visibility: hidden;
+
+    // Showing
+
+    &.active &-content {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    &.active &-background {
+        opacity: 1;
+    }
+
+    &.active {
+        visibility: visible;
+    }
+
+    @include xs-block {
+        &-content {
+            max-width: 85%;
+            padding: 50px 20px;
+        }
+
+        &-heading {
+            font-size: 21px;
+        }
+
+        &-input- {
+
+            &name,
+            &phone {
+                width: 100%;
+                height: 40px;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &-submit {
+            height: 50px;
+            font-size: 20px;
+        }
+
+        .close-btn {
+            top: 0;
+            font-size: 40px;
+            font-weight: 500;
+        }
+    }
+}
